@@ -1,0 +1,236 @@
+/* Primary Styles */
+body {
+    font-family: Calibri, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+/* HEADER */
+header {
+    background-color: pink;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+h2, h3 {
+    color: #cc0066;
+}
+
+/* SLIDESHOW */
+/* SLIDESHOW CONTAINER */
+.slideshow {
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    background-color: lightgray;
+    position: relative;
+}
+
+/* SLIDER */
+.slider {
+    width: 400%;
+    display: flex;
+    animation: slide 12s infinite;
+}
+
+.slider figure {
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+
+/* IMAGES */
+.slider figure img {
+    width: 100vw;
+    height: 300px;
+    object-fit: contain;
+}
+
+/* ANIMATION */
+@keyframes slide {
+    0%, 25% { transform: translateX(0); }
+    30%, 50% { transform: translateX(-100vw); }
+    55%, 75% { transform: translateX(-200vw); }
+    80%, 100% { transform: translateX(-300vw); }
+}
+
+
+/* PRODUCT SECTION */
+.products {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+    background: pink;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 180px;
+}
+
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.product p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* DIY Kits Section */
+.kits {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.kits h2 {  /* Fixed selector */
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Layout for DIY Kits */
+.kit-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* DIY Kit Container */
+.kit {
+    display: flex;
+    align-items: center;
+    background: pink;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    transition: transform 0.3s ease;
+}
+
+/* DIY Kit Images */
+.kit img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+/* Kit Content */
+.kit-content {
+    flex: 1;
+    text-align: left;
+}
+
+/* Kit Title */
+.kit-content h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Kit Description */
+.kit-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Hover Effect */
+.kit:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kit {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .kit img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* CUSTOMER SUBMISSIONS */
+.customer-submissions {
+    text-align: center;
+    padding: 20px;
+}
+
+.customer-submissions form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.customer-submissions input, 
+.customer-submissions textarea, 
+.customer-submissions button {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: pink;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,150 @@
+/* Primary Styles */
+body {
+    font-family: Calibri, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+/* HEADER */
+header {
+    background-color: pink;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+h2, h3 {
+    color: #cc0066;
+}
+
+/* ABOUT US */
+.about {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.about-container img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.about-text {
+    width: 50%;
+    text-align: center;
+}
+
+.about-text h3 {
+    color: #cc0066;
+}
+
+.about-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-text ul li {
+    background: url('checkmark.png') no-repeat left center;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+/* TEAM SECTION */
+.team {
+    text-align: center;
+    padding: 40px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+    width: 250px;
+}
+.team-member h3 {
+    font-size: 20px;
+    color: #cc0066; 
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: pink;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container img {
+        width: 80%;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

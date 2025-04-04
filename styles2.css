@@ -1,0 +1,137 @@
+/* Primary Styles */
+body {
+    font-family: Calibri, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+/* HEADER */
+header {
+    background-color: pink;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+nav ul li input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+h2, h3 {
+    color: #cc0066;
+}
+.customer-works {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.art-item {
+    width: 100%;
+    max-width: 250px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.art-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.art-item:hover {
+    transform: scale(1.05);
+}
+.like-btn {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.like-btn.liked {
+    background: #e63946; /* Darker red when liked */
+}
+
+.submit-art {
+    text-align: center;
+    margin: 40px auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form button {
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e63946;
+}
+footer {
+    background-color: pink;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}

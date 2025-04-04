@@ -20,7 +20,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="customerworks.html">Customer Works</a></li>
+                <li><a href="customerworks.html" class="active">Customer Works</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
                 <li><input type="text" placeholder="Search..."></li>
             </ul>
@@ -77,8 +77,8 @@ function toggleLike(button) {
 	    </div>
  <div class="art-item">
                 <img src="crotchetcow.jpeg" alt="Artwork 3">
-                <h3>Pretty Bouquet</h3>
-                <p>By: Emily Smith</p>
+                <h3>Cute and Cuddly Cow</h3>
+                <p>By: Niah Wilkinson</p>
 		  <!-- Like Button -->
                    <button class="like-btn" onclick="toggleLike(this)">
 		        ❤️ Like</button>
@@ -90,8 +90,8 @@ function toggleLike(button) {
 	    </div>
 <div class="art-item">
                 <img src="seaturtle.jpeg" alt="Artwork 3">
-                <h3>Pretty Bouquet</h3>
-                <p>By: Emily Smith</p>
+                <h3>Under The Sea</h3>
+                <p>By: Dionne Mohammed</p>
 		  <!-- Like Button -->
                    <button class="like-btn" onclick="toggleLike(this)">
 		        ❤️ Like</button>
@@ -103,8 +103,8 @@ function toggleLike(button) {
 	    </div>
 <div class="art-item">
                 <img src="paperhearts.jpeg" alt="Artwork 3">
-                <h3>Pretty Bouquet</h3>
-                <p>By: Emily Smith</p>
+                <h3>Hearts <3</h3>
+                <p>By: Kevin Hart</p>
 		  <!-- Like Button -->
                    <button class="like-btn" onclick="toggleLike(this)">
 		        ❤️ Like</button>
@@ -116,8 +116,8 @@ function toggleLike(button) {
 	    </div>
 <div class="art-item">
                 <img src="keychain.jpeg" alt="Artwork 3">
-                <h3>Pretty Bouquet</h3>
-                <p>By: Emily Smith</p>
+                <h3>Cute Initial Keychains</h3>
+                <p>By:Luckey Smith</p>
 		  <!-- Like Button -->
                    <button class="like-btn" onclick="toggleLike(this)">
 		        ❤️ Like</button>
@@ -129,8 +129,8 @@ function toggleLike(button) {
 	    </div>
 <div class="art-item">
                 <img src="clayframe.jpeg" alt="Artwork 3">
-                <h3>Pretty Bouquet</h3>
-                <p>By: Emily Smith</p>
+                <h3>CutESY Mirror Frame</h3>
+                <p>By: Nisa Williams</p>
 		  <!-- Like Button -->
                    <button class="like-btn" onclick="toggleLike(this)">
 		        ❤️ Like</button>
@@ -140,46 +140,50 @@ function toggleLike(button) {
 }
 </script>
 	    </div>
-
-
-
-
-        </div>
+	</div>
     </section>
 
-    <!-- SUBMIT ARTWORK SECTION -->
+
     
-    <section class="submit-art">
-        <h2>Showcase Your Artwork</h2>
-	<p> Want your artwork to be featured on our Customer Works page?</p>
-	<p> Submit your artwork! Fill out the form below.</p>
+<!-- SUBMIT ARTWORK SECTION -->
+<section class="submit-art">
+    <h2>Showcase Your Artwork</h2>
+    <p>Want your artwork to be featured on our Customer Works page?</p>
+    <p>Submit your artwork! Fill out the form below.</p>
 
-        <form action="action_page.php" method="POST">
+    <form id="artworkForm" action="action_page.php" method="POST" enctype="multipart/form-data">
         <div>
-		<label for="name"> Name:</label>
-		<input type="text" id="fname" name="fname" placeholder="Jane Doe" required>
-	</div>
-	<div>
-		<label for "email">Email:</label>
-		<input type="email" id="email" name="email" placeholder="janedoe@gmail.com" required>
-	</div>
-	<div>
-		<label for="phone">Phone:</label>
-		<input type="tel" id="phone" name="phone" placeholder="(868)123-4567" required>
-	</div>
-	<input type="file" accept="image/*">
-            <textarea placeholder="Describe your artwork"></textarea>
-	<div>
-		<input type="reset">
-	</div>
-            <button type="submit">Submit</button>
-        </form><script src="script.js"> </script>
-    </section>
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Jane Doe" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="janedoe@gmail.com" required>
+        </div>
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="(868)123-4567" required pattern="^\(\d{3}\)\d{3}-\d{4}$" title="Phone number format: (868)123-4567">
+        </div>
+        <div>
+            <label for="artworkFile">Upload Artwork:</label>
+            <input type="file" id="artworkFile" name="artworkFile" accept="image/*" required>
+        </div>
+        <div>
+            <label for="description">Describe your artwork:</label>
+            <textarea id="description" name="description" placeholder="Tell us about your artwork..." required></textarea>
+        </div>
+        <div>
+            <input type="reset" value="Clear Form">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="script.js"></script>
+</section>
 
+     
     <!-- FOOTER -->
     <footer>
-        <p>Find Us: <a href="#">Google Maps</a> | <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+        <p>Find Us: <a href="https://maps.app.goo.gl/F7uc5w2xSbR5XcT48" target= "_blank">Google Maps</a> | <a href="https://www.instagram.com/the_.crafty_corner?igsh=MTh5NW03cnB2d2xnMQ==" target="_blank">Instagram</a> | <a href="https://www.facebook.com/profile.php?id=100063822092493" target="_blank">Facebook</a></p>
     </footer>
-
 </body>
 </html>

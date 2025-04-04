@@ -1,4 +1,4 @@
-/* Primary Styles */
+/* General Styles */ 
 body {
     font-family: Calibri, sans-serif;
     margin: 0;
@@ -7,7 +7,7 @@ body {
     color: black;
 }
 
-/* HEADER */
+/*HEADER*/
 header {
     background-color: pink;
     color: black;
@@ -26,19 +26,19 @@ header {
     margin-right: 10px;
 }
 
+/* Navigation styles */
 nav ul {
-    list-style: none;
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    list-style: none;  
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 10px;
-}
-
-nav ul li a {
-    color: black;
-    text-decoration: none;
+    margin: 5px;
 }
 
 nav ul li input {
@@ -47,12 +47,72 @@ nav ul li input {
     border: none;
 }
 
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+nav ul li a.active {
+    border-bottom: 2px solid #cc0066 !important; 
+}
+
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
 h2, h3 {
     color: #cc0066;
 }
 
+/*HERO SECTION STYLES*/
+.hero {
+  background: linear-gradient(135deg, #ffe8f0, #fdf6e3); /* pastel pink + light cream */
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.75rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn {
+  background-color: #ffd700;
+  color: #000;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #ffcc00;
+}
+
+
 /* SLIDESHOW */
-/* SLIDESHOW CONTAINER */
 .slideshow {
     overflow: hidden;
     width: 100%;
@@ -60,8 +120,6 @@ h2, h3 {
     background-color: lightgray;
     position: relative;
 }
-
-/* SLIDER */
 .slider {
     width: 400%;
     display: flex;
@@ -74,14 +132,12 @@ h2, h3 {
     margin: 0;
 }
 
-/* IMAGES */
 .slider figure img {
     width: 100vw;
     height: 300px;
     object-fit: contain;
 }
 
-/* ANIMATION */
 @keyframes slide {
     0%, 25% { transform: translateX(0); }
     30%, 50% { transform: translateX(-100vw); }
@@ -132,21 +188,17 @@ h2, h3 {
     background-color: #f8f8f8;
 }
 
-.kits h2 {  /* Fixed selector */
+.kits h2 {  
     font-size: 28px;
     color: #333;
     margin-bottom: 20px;
 }
-
-/* Layout for DIY Kits */
 .kit-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
-
-/* DIY Kit Container */
 .kit {
     display: flex;
     align-items: center;
@@ -158,8 +210,6 @@ h2, h3 {
     max-width: 800px;
     transition: transform 0.3s ease;
 }
-
-/* DIY Kit Images */
 .kit img {
     width: 200px;
     height: 150px;
@@ -167,28 +217,20 @@ h2, h3 {
     border-radius: 5px;
     margin-right: 20px;
 }
-
-/* Kit Content */
 .kit-content {
     flex: 1;
     text-align: left;
 }
-
-/* Kit Title */
 .kit-content h3 {
     font-size: 20px;
     color: #333;
     margin-bottom: 5px;
 }
-
-/* Kit Description */
 .kit-content p {
     font-size: 14px;
     color: #666;
     line-height: 1.5;
 }
-
-/* Hover Effect */
 .kit:hover {
     transform: scale(1.03);
     cursor: pointer;
